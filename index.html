@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,35 +9,39 @@
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800"
 	rel="stylesheet" type="text/css">
     <style type="text/css">
 
-     /*Large desktop*/
+     /* Large desktop */
      @media (min-width:980px) {
       body {
        padding-top: 60px;
       }
       .linediv-l {
-	border-right:1px white solid;
+	border-right: 1px white solid;
       } 
       .linediv-r {
 	border-left: 1px white solid;
        }
      }
 
-     /*Landscape phones and down*/
-     @media (max width:480px) {
+     /* Landscape phones and down */
+     @media (max width: 480px) {
       .copy {
 	padding:2.5% 10%;
       }
       .linediv-l {
 	border-bottom: 1px white solid;
       }
+      .linediv-r: {
+	border-top: 1px white solid;
+      }
      }
 
-     /* All form factors */      
+     /* All form factors */   
+   
      /* Main body and headings */
       body{
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -81,7 +85,7 @@
 	text-align: justify;
       }
       .asset {
-	padding: 2.5% o%;
+	padding: 2.5% 0%;
       }
       .footer {
 	color: #cccccc;
@@ -128,8 +132,8 @@
       <!-- Font and paired font of .heading/.subheading and body fron Google Fonts  -->
       <!-- www.google.com/fonts/specimen/Ubuntu -->
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class = "row-fluid heading">
-	<div class= "span12">
+      <div class="row-fluid heading">
+	<div class="span12">
  	  <h1>Product</h1>
 	</div>
       </div>
@@ -203,7 +207,10 @@
 	  <img lass="img polaroid" src="http://placehold.it/480x300">
 	</div>
       </div>      
-
+	
+	<!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+	<!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+	<!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
       <div class="row-fluid faq">
 	<div class="span10 offset1">
 	  <h3>FAQ</h3>
@@ -221,6 +228,19 @@
 	</div>
 	</div>
 	</div>
+	<div class="accordion-group">
+	<div class="accordion-heading">
+	<a class="accordion-toggle" data-toggle="collapse"
+	 data parent="#accordion2" href="#collapseTwo">
+	    I like you, you like me? 
+	 </a>
+	</div>
+	<div id="collapseTwo" class="accordion-body collapse">
+	<div class="accordion-inner">
+	Very much! 
+	</div>
+	</div>
+	</div>
 	</div>
 	</div>
       </div>
@@ -228,7 +248,7 @@
       <div class="row-fluid footer">
 	<div class="span12">
 	  <p>This work is licensed under
-	    the <a href=http://creativecommons.org/licenses/by-sa/3.0/">CC
+	    the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
 	    By-SA 3.0
 	   </a>, without all the cruft that would otherwise be 
 	   put at the bottom of the page.</p>
